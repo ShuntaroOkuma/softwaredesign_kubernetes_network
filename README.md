@@ -1,0 +1,2 @@
+# softwaredesign202207
+技術評論社Software Design 2022年7月号 スッキリわかるKubernetesネットワークの仕組み の補足リポジトリ
