@@ -78,9 +78,7 @@ alias kubectl="minikube kubectl --"
 
 クラスタ内でコンテナとして稼働させるアプリをDockerイメージとして用意しておきます。
 
-app.pyとDockerfileを利用します。
-
-ビルドのためにはまずはDocker環境を切り替える必要があります。
+本README.mdと同階層に置いている `app.py` と `Dockerfile` を利用して、Dockerイメージをビルドできますが、その前にまずはDocker環境を切り替える必要があります。
 
 minikubeは、Dockerをインストールした時に構築されるDocker環境（デフォルト環境）を利用せず、独自にDocker環境を構築し、そこにクラスタを作っています。そのクラスタにて自分で作成したコンテナイメージをPodとして起動するには、minikubeのDocker環境内にコンテナイメージを用意する必要があります。しかし、初期の設定のままdocker buildのコマンドを実行するとデフォルト環境にコンテナイメージが作成されてしまいます。そこでまずはminikubeのDocker環境に切り替える必要がある、ということです。
 
@@ -102,3 +100,5 @@ docker build -t sample_api:1.0 ./
 ```sh
 eval $(minikube docker-env -u)
 ```
+
+これで、事前の環境構築は完了です。
