@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: app1
+  name: app1
+spec:
+  serviceAccount: admin
+  containers:
+    - name: app1
+      image: sample_api:1.0
+      command: ["python", "app.py"]
